@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.instruction {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  padding: 40%;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Colored buttons */
+.red { background-color: #ef4444; }
+.blue { background-color: #3b82f6; }
+.green { background-color: #22c55e; }
+.yellow { background-color: #eab308; }
+.flash { background-color: #cbd5e1; }
+.userFlash { background-color: black; }
