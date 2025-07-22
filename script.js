@@ -27,7 +27,7 @@ let levelUp = () => {
     // Random color logic
     let randIdx = Math.floor(Math.random() * 4);
     let randColor = btns[randIdx];
-    let randBtn = document.querySelector(`#${randColor}`); // FIXED: use `#id` not `.class`
+    let randBtn = document.querySelector(`#${randColor}`);
 
     gameSeq.push(randColor);
     gameFlash(randBtn);
@@ -54,7 +54,7 @@ function btnPress() {
     let btn = this;
     userFlash(btn);
 
-    let userColor = btn.getAttribute("id"); // FIXED: add 'let'
+    let userColor = btn.getAttribute("id"); 
     userSeq.push(userColor);
 
     checkAns(userSeq.length - 1);
@@ -67,10 +67,10 @@ for (let btn of allBtns) {
 
 // Compare user input with game sequence
 function checkAns(idx) {
-    if (userSeq[idx] === gameSeq[idx]) { // FIXED: spelling was `idex`, should be `idx`
+    if (userSeq[idx] === gameSeq[idx]) { 
         if (userSeq.length === gameSeq.length) {
             setTimeout(() => {
-                levelUp(); // FIXED: wrap in function for setTimeout
+                levelUp(); 
             }, 1000);
         }
     } else {
